@@ -1,8 +1,26 @@
-// import { useState } from 'react';
 import './App.css';
+import Square from './components/Square';
 
 function App() {
-  return <button className="square">X</button>;
+  return (
+    <>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+    </>
+  );
 }
 
 export default App;
