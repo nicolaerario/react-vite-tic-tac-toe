@@ -1,5 +1,5 @@
 interface Props {
-  value: string | null;
+  value: string;
   onSquareClick: () => void;
 }
 

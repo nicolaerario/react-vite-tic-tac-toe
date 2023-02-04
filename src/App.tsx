@@ -5,10 +5,10 @@ import Square from './components/Square';
 export default function App() {
   // States
   const [xIsNext, setXIsNext] = useState<boolean>(true);
-  const [squares, setSquares] = useState<string[]>(Array(9).fill(null));
+  const [squares, setSquares] = useState<string[]>(Array(9).fill(''));
 
   const winner = calculateWinner(squares);
-  let status;
+  let status: string;
   if (winner) {
     status = `Winner is ${winner}`;
   } else {
@@ -75,7 +75,7 @@ export default function App() {
   );
 }
 
-function calculateWinner(squares: string[]) {
+function calculateWinner(squares: string[]): string | null {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
